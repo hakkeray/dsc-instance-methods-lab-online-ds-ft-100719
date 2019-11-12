@@ -29,11 +29,25 @@ Define these classes and instance methods in the cells below
 
 ```python
 # Define Driver class here
+class Driver(object):
+    
+    def greeting(self):
+        return "Hey, how are you?"
+    
+    def ask_for_destination(self):
+        return "Where would you like to go today?"
 ```
 
 
 ```python
 # Define Passenger class here 
+class Passenger(object):
+    
+    def reply_greeting(self):
+        return "I am doing well! Thanks for picking me up today!"
+    
+    def in_a_hurry(self):
+        return "Punch it! They're on our tail!"
 ```
 
 ## Instantiate Instances and Practice Using Instance Methods
@@ -43,25 +57,31 @@ Start by instantiating two drivers and two passengers. Assign the drivers to the
 
 
 ```python
-daniel = None # driver
-meryl = None # driver
-niky = None # passenger
-terrance = None # passenger
+daniel = Driver() # driver
+meryl = Driver() # driver
+niky = Passenger() # passenger
+terrance = Passenger() # passenger
 ```
 
 Alright, you have our passengers and drivers! Now you need to put those instance methods to use. Try them out and assign the return values to the variables below. Have `daniel` greet his passenger, who is going to be `niky`. Assign the greeting to the variable, `polite_greeting`. Have `niky` respond by calling `in_a_hurry`, and assign the return value to the variable, `no_time_to_talk`.
 
 
 ```python
-polite_greeting = None
+polite_greeting = daniel.greeting()
 print(polite_greeting)
 ```
 
+    Hey, how are you?
+
+
 
 ```python
-no_time_to_talk = None
+no_time_to_talk = niky.in_a_hurry()
 print(no_time_to_talk)
 ```
+
+    Punch it! They're on our tail!
+
 
 ## Extra Practice
 
@@ -72,40 +92,58 @@ In the cells below, you'll create three different classes that represent animals
 
 ```python
 # create Lion class
+class Lion(object):
+    
+    def speak(self):
+        return "ROAR!"
 ```
 
 
 ```python
 # create Tiger class
+class Tiger(object):
+    
+    def speak(self):
+        return "MEOW!"
 ```
 
 
 ```python
 # create Elephant class
+class Elephant(object):
+    
+    def speak(self):
+        return "BBBrrrrrooo"
 ```
 
 Now, in the cell below, create an instance of each animal. 
 
 
 ```python
-simba = None
-tony = None
-dumbo = None
+simba = Lion()
+tony = Tiger()
+dumbo = Elephant()
 ```
 
 Now, append each of them into the list `zoo` in the cell below.
 
 
 ```python
-zoo = None
+zoo = [simba, tony, dumbo]
 ```
 
 Now, loop through the `zoo` list and call print out the `.speak()` method for every animal in the zoo. 
 
 
 ```python
-
+for animals in zoo:
+    print(animals.speak())
 ```
+
+    ROAR!
+    MEOW!
+    BBBrrrrrooo
+
 
 ## Summary
 In this lab, you practiced defining classes and instance methods. You then instantiated instances of your classes and used them to practice calling your instance methods. 
